@@ -1,0 +1,26 @@
+{
+  "name": "listify",
+  "version": "0.1.0",
+  "title": "Listify",
+  "description": "A jQuery plugin that adds meta list items to master list items on hover.",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "list",
+    "toggle"
+  ],
+  "homepage": "https://github.com/m1ck3y/listify",
+  "author": {
+    "name": "Jon Kuperman",
+    "url": "http://jonkuperman.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jstayton/jquery-manifest/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}

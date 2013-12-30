@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>My Website</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+	<h1>My Website</h1>
+
+	<h3>Projects</h3>
+	<ul id="example">
+		<li data-tools='["PHP","Git","CodeIgniter"]'>My First Job</li>
+		<li data-tools='["JavaScript","Ruby","Git"]'>My Second Job</li>
+		<li data-tools='["PHP","JavaScript","Laravel"]'>My Third Job</li>
+	</ul>
+
+	<h3>Tools</h3>
+	<ul>
+		<li data-tool="Ruby">Ruby</li>
+		<li data-tool="Git">Git</li>
+		<li data-tool="PHP">PHP</li>
+		<li data-tool="JavaScript">JavaScript</li>
+		<li data-tool="CodeIgniter">CodeIgniter</li>
+		<li data-tool="Laravel">Laravel</li>
+	</ul>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="listify.js"></script>
+	<script>
+		$('#example').listify();
+	</script>
+	</body>
+</html>
