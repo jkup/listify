@@ -1,6 +1,6 @@
 {
   "name": "listify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Listify",
   "description": "A jQuery plugin that adds meta list items to master list items on hover.",
   "keywords": [
@@ -22,5 +22,6 @@
   ],
   "dependencies": {
     "jquery": ">=1.5"
-  }
+  },
+  "demo": "http://jonkuperman.com/listify"
 }
