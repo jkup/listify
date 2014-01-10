@@ -3,7 +3,7 @@
 
 	$.fn.listify = function(options) {
 		var effect = (options.effect === 'append') ? 'append' : 'toggle',
-		type = (typeof options.type !== 'undefined') ? options.type : 'tool',
+		attribute = (typeof options.attribute !== 'undefined') ? options.attribute : 'tool',
 		$listify = this;
 
 		$listify
@@ -17,7 +17,7 @@
 				}
 
 				$.each(tools, function(key, value) {
-					var $tool = $('[data-'+type+'='+value+']');
+					var $tool = $('[data-'+attribute+'='+value+']');
 					if(effect === 'append') {
 						$tool.clone().appendTo($list);
 						$tool.hide();
@@ -40,7 +40,7 @@
 					tools = $this.data('tools');
 
 					$.each(tools, function(key, item) {
-						var $tool = $('[data-'+type+'='+item+']');
+						var $tool = $('[data-'+attribute+'='+item+']');
 						$tool.animate({opacity: '1.0'}, 200);
 					});
 				}
