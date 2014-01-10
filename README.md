@@ -36,12 +36,12 @@ First, make the list of parent items:
 Next, make the list of child items:
 
     <ul class="tools">
-        <li data-tool2="Ruby">Ruby</li>
-        <li data-tool2="Git">Git</li>
-        <li data-tool2="PHP">PHP</li>
-        <li data-tool2="JavaScript">JavaScript</li>
-        <li data-tool2="CodeIgniter">CodeIgniter</li>
-        <li data-tool2="Laravel">Laravel</li>
+        <li data-tool="Ruby">Ruby</li>
+        <li data-tool="Git">Git</li>
+        <li data-tool="PHP">PHP</li>
+        <li data-tool="JavaScript">JavaScript</li>
+        <li data-tool="CodeIgniter">CodeIgniter</li>
+        <li data-tool="Laravel">Laravel</li>
     </ul>
 
 Last, to get listify working for your project, just link to the listify.js file and then:
