@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Listify Examples</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+	<nav class="navbar navbar-default" role="navigation">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Listify</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="https://github.com/m1ck3y/listify">Github</a></li>
+	          <li><a href="http://plugins.jquery.com/listify/">jQuery Plugins Page</a></li>
+	          <li class="divider"></li>
+	          <li><a href="http://www.jonkuperman.com/">Jon Kuperman</a></li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </div><!-- /.navbar-collapse -->
+	</nav>
+
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h1>Listify in Append Mode</h1>
+
+			<pre><code>$('#example').listify({effect: 'append'});</code></pre>
+		</div>
+	</div>
+
+	<div class="row section">
+		<div class="col-md-10 col-md-offset-1">
+			<h3>Projects: <span>(hover over them!)</span></h3>
+			<ul id="example" class="list-group">
+				<li class="list-group-item" data-tools='["PHP","Git","CodeIgniter"]'>My First Project</li>
+				<li class="list-group-item" data-tools='["JavaScript","Ruby","Git"]'>My Second Project</li>
+				<li class="list-group-item" data-tools='["PHP","JavaScript","Laravel"]'>My Third Project</li>
+			</ul>
+
+			<h4>Tools Used:</h4>
+			<ul class="tools">
+				<li data-tool="Ruby">Ruby</li>
+				<li data-tool="Git">Git</li>
+				<li data-tool="PHP">PHP</li>
+				<li data-tool="JavaScript">JavaScript</li>
+				<li data-tool="CodeIgniter">CodeIgniter</li>
+				<li data-tool="Laravel">Laravel</li>
+			</ul>
+		</div>
+	</div>
+
+	<hr />
+
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h1>Listify in Toggle Mode</h1>
+
+			<pre><code>$('#example').listify({effect: 'toggle', type: 'tool'});</code></pre>
+		</div>
+	</div>
+
+	<div class="row section">
+		<div class="col-md-10 col-md-offset-1">
+			<h3>Projects: <span>(hover over them!)</span></h3>
+			<ul id="example2" class="list-group">
+				<li class="list-group-item" data-tools='["PHP","Git","CodeIgniter"]'>My First Project</li>
+				<li class="list-group-item" data-tools='["JavaScript","Ruby","Git"]'>My Second Project</li>
+				<li class="list-group-item" data-tools='["PHP","JavaScript","Laravel"]'>My Third Project</li>
+			</ul>
+
+			<h4>Tools Used:</h4>
+			<ul class="tools">
+				<li data-tool2="Ruby">Ruby</li>
+				<li data-tool2="Git">Git</li>
+				<li data-tool2="PHP">PHP</li>
+				<li data-tool2="JavaScript">JavaScript</li>
+				<li data-tool2="CodeIgniter">CodeIgniter</li>
+				<li data-tool2="Laravel">Laravel</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="../listify.js"></script>
+	<script>
+		$('#example').listify({effect: 'append'});
+		$('#example2').listify({effect: 'toggle', type: 'tool2'});
+	</script>
+	</body>
+</html>

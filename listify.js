@@ -2,10 +2,10 @@
 	'use strict';
 
 	$.fn.listify = function(options) {
-		//get display effect, defaulting to toggle
-		var effect = (options === 'append') ? 'append' : 'toggle';
+		var effect = (options.effect === 'append') ? 'append' : 'toggle',
+		type = (typeof options.type !== 'undefined') ? options.type : 'tool',
+		$listify = this;
 
-		var $listify = this;
 		$listify
 			.on('mouseenter', 'li', function() {
 				var $this = $(this),
@@ -17,12 +17,12 @@
 				}
 
 				$.each(tools, function(key, value) {
-					var $tool = $('[data-tool='+value+']');
+					var $tool = $('[data-'+type+'='+value+']');
 					if(effect === 'append') {
 						$tool.clone().appendTo($list);
 						$tool.hide();
 					} else {
-						$tool.animate({opacity: '0.0'});
+						$tool.animate({opacity: '0.0'}, 200);
 					}
 				});
 
@@ -40,8 +40,8 @@
 					tools = $this.data('tools');
 
 					$.each(tools, function(key, item) {
-						var $tool = $('[data-tool='+item+']');
-						$tool.animate({opacity: '1.0'});
+						var $tool = $('[data-'+type+'='+item+']');
+						$tool.animate({opacity: '1.0'}, 200);
 					});
 				}
 		});
