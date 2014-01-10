@@ -12,7 +12,7 @@
 					$list = $('<ul class="listify-sublist"></ul>'),
 					tools = $this.data('tools');
 
-				if ($this.parent()[0] !== $listify[0]) {
+				if ($this.parent().get(0) !== $listify.get(0)) {
 					return;
 				}
 
