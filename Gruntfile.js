@@ -2,8 +2,8 @@ module.exports = function(grunt) {
     'use strict';
 
     var file_list =  [
-        '**/*.js'
-        ,'!node_modules/**/*.js'
+        '**/*.js',
+        '!node_modules/**/*.js'
     ];
 
     // Project configuration.
@@ -13,27 +13,25 @@ module.exports = function(grunt) {
         jshint: {
             options: {
                 // Enforcing options
-                curly: true
-                // ,forin: true
-                ,eqeqeq: true
-                ,immed: true
-                ,latedef: 'nofunc'
-                ,newcap: true
-                ,noarg: true
-                ,noempty: true
-                ,quotmark: 'single'
-                // ,undef: true
-                ,unused: true
-                ,strict: true
-                ,trailing: true
-                ,browser: true
-                ,globals: {
+                curly: true,
+                eqeqeq: true,
+                immed: true,
+                latedef: 'nofunc',
+                newcap: true,
+                noarg: true,
+                noempty: true,
+                quotmark: 'single',
+                unused: true,
+                strict: true,
+                trailing: true,
+                browser: true,
+                globals: {
                     jQuery: true
-                }
+                },
 
                 // Relaxing options
-                ,boss: true
-                ,laxcomma: true
+                boss: true,
+                laxcomma: true
             },
             uses_defaults: file_list.concat(['Gruntfile.js'])
         },
@@ -43,8 +41,8 @@ module.exports = function(grunt) {
                 files: file_list,
                 tasks: ['jshint'],
                 options: {
-                    spawn: false
-                    ,interrupt: true
+                    spawn: false,
+                    interrupt: true
                 },
             },
         },
