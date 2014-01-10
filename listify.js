@@ -4,13 +4,14 @@
 	$.fn.listify = function(options) {
 		var effect = (options.effect === 'append') ? 'append' : 'toggle',
 		attribute = (typeof options.attribute !== 'undefined') ? options.attribute : 'tool',
+		attributes = (typeof options.attribute !== 'undefined') ? options.attribute+'s' : 'tools',
 		$listify = this;
 
 		$listify
 			.on('mouseenter', 'li', function() {
 				var $this = $(this),
 					$list = $('<ul class="listify-sublist"></ul>'),
-					tools = $this.data('tools');
+					tools = $this.data(attributes);
 
 				if ($this.parent().get(0) !== $listify.get(0)) {
 					return;
@@ -37,7 +38,7 @@
 					$('.listify-sublist').remove();
 				} else {
 					var $this = $(this),
-					tools = $this.data('tools');
+					tools = $this.data(attributes);
 
 					$.each(tools, function(key, item) {
 						var $tool = $('[data-'+attribute+'='+item+']');
